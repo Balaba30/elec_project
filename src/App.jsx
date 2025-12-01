@@ -11,7 +11,6 @@ import { Checkout } from './components/checkout/Checkout';
 import { OrderHistory } from './components/orders/OrderHistory';
 import { OrderTracking } from './components/orders/OrderTracking';
 import RestaurantOwnerDashboard from './components/orders/RestaurantOwnerDashboard';
-import IliganLogo from './logo/LOGO.png';
 import './App.css';
 
 const App = () => {
@@ -107,15 +106,9 @@ const App = () => {
       {!hideNavigation && (
         <header className="w-full shadow-lg p-3 z-20 sticky top-0" style={{ backgroundColor: ORANGE }}>
           <div className="flex justify-between items-center w-full max-w-3xl mx-auto"> 
-              <a href="/">
-      {/* 3. The <img> tag uses the imported logo variable. */}
-      <img 
-        src={IliganLogo} 
-        alt="ILIGAN Food Logo" 
-        // 4. Tailwind classes for sizing the image (h-10 is a common size).
-        className="h-10 w-auto object-contain" 
-      />
-    </a>
+              <a href="/" className="text-white font-bold text-lg">
+                ILIGAN Food
+              </a>
               {user && (
               <div className="flex items-center text-white text-sm">
                 <span className="mr-3 font-semibold hidden sm:inline">Hi, **{displayUserId}**</span>
